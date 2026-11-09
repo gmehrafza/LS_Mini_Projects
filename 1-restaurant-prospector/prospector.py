@@ -20,7 +20,7 @@ CHAINS = [
     "cactus club", "joey", "earls", "the keg", "boston pizza", "kelseys",
     "montana's", "milestones", "jack astor", "mcdonald", "tim hortons",
     "starbucks", "subway", "pizza pizza", "a&w", "wendy", "burger king",
-    "kfc", "popeyes", "chipotle", "five guys", "swiss chalet", "st-hubert",
+    "kfc", "popeyes", "chipotle", "five guys", "swiss chalet", "st-hubert", "landwer",
 ]
 
 PLATFORMS = {
