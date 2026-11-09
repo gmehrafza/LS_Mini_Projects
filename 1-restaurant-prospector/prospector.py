@@ -1,3 +1,4 @@
+import csv
 import os
 import re
 import unicodedata
@@ -112,3 +113,11 @@ if __name__ == "__main__":
     print(f"\nChecked {len(restaurants)} independent restaurants:\n")
     for r in restaurants:
         print(f"- {r['name']} | {r['address']} | {r['platforms']}")
+
+    output_file = Path(__file__).resolve().parent / "restaurants_M2N.csv"
+    columns = ["name", "address", "phone", "website", "rating", "reviews", "category", "platforms"]
+    with open(output_file, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=columns)
+        writer.writeheader()
+        writer.writerows(restaurants)
+    print(f"\nSaved {len(restaurants)} restaurants to {output_file.name}")
